@@ -1,0 +1,28 @@
+// Simple dictionary for demo (replace with API in production)
+const dictionary = {
+  "soul": "आत्मन्",
+  "eternal": "शाश्वत",
+  "peace": "शान्ति",
+  "knowledge": "ज्ञान",
+  "god": "देव"
+};
+
+function translate() {
+  const input = document.getElementById("input").value.toLowerCase();
+  const showDiacritics = document.getElementById("diacritics").checked;
+  let output = "";
+
+  // Step 1: Simple word-by-word translation
+  const words = input.split(" ");
+  for (const word of words) {
+    const sanskritWord = dictionary[word] || word;
+    output += sanskritWord + " ";
+  }
+
+  // Step 2: Add diacritics if enabled
+  if (showDiacritics) {
+    output = sanscript.t(output, sanscript.DEVANAGARI, sanscript.IAST);
+  }
+
+  document.getElementById("output").textContent = output.trim();
+}

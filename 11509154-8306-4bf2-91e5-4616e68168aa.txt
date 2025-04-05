@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>English to Sanskrit Translator</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    textarea, button, #output {
+      width: 100%;
+      margin: 10px 0;
+    }
+    #output {
+      min-height: 50px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>English to Sanskrit Translator</h1>
+  <textarea id="input" placeholder="Enter English text..."></textarea>
+  <button onclick="translate()">Translate</button>
+  <label>
+    <input type="checkbox" id="diacritics" checked> Show Diacritics
+  </label>
+  <div id="output"></div>
+  <script src="https://cdn.jsdelivr.net/npm/indic-transliteration@1.9.4/dist/bundle.min.js"></script>
+  <script src="translator.js"></script>
+</body>
+</html>
